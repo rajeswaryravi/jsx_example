@@ -1,0 +1,98 @@
+Accessing a variable:
+ 
+You can access the value of any variable within curly braces as shown below:
+ 
+function App() {
+  let count = 5;
+  return (
+<>
+<h1>{count}</h1>
+<h2>{count * count}</h2>
+</>
+  );
+}
+export default App;
+Arithmetic operators can also be used as shown above
+ 
+Accessing an object: 
+ 
+The properties of an object can be accessed as shown below:
+ 
+function App() {
+    let name = {
+      firstName: "John",
+      lastName: "Doe",
+    };
+    return (
+<>
+<h1>
+          {name.firstName} {name.lastName}
+</h1>
+</>
+    );
+  }
+  export default App;
+Specifying attributes' expression: 
+ 
+You can provide dynamic values to attributes as shown below:
+ 
+function App() {
+  let highlight = {
+    color: "blue",
+    backgroundColor: "grey",
+  };
+  return (
+<>
+<h1 style={highlight}>Welcome to React</h1>
+</>
+  );
+}
+export default App;
+
+
+
+
+
+
+function App() {
+    var x=25, y=30
+    return (
+<>
+<h2> Evaluating expression </h2>
+<h3> {x} {">"}{y} {":"} {x>y ? 'True' : 'False'} </h3>
+</>
+    );
+  }
+export default App;
+
+
+function App() {
+  let element = null;
+  let isLoggedIn = false;
+  if (isLoggedIn) {
+    element = <h2>Welcome Admin</h2>;
+  } else {
+    element = <h2>Please Login</h2>;
+  }
+  return <>{element}</>;
+}
+export default App;
+
+
+
+function App() {
+  let isLoggedIn = false;
+  return isLoggedIn ? <h2>Welcome Admin</h2> : <h2>Please Login</h2>;
+}
+
+
+export default App;
+function App() {
+  let element = null;
+  let isLoggedIn = false;
+  isLoggedIn
+    ? (element = <h2>Welcome Admin</h2>)
+    : (element = <h2>Please Login</h2>);
+  return <>{element}</>;
+}
+export default App;
